@@ -1,0 +1,19 @@
+{
+  "name": "tv_live_source",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/tv_list.js",
+  "scripts": {
+    "cy:open": "cypress open --e2e --browser chrome"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.7",
+    "cheerio": "^1.0.0-rc.12"
+  },
+  "devDependencies": {
+    "cypress": "^13.6.4"
+  }
+}
