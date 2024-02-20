@@ -22,8 +22,8 @@ jobs:
         run: yarn cy:run
 
       - name: commit generated files
-          run: |
-            git config --local user.email "plmmilove@foxmail.com"
-            git config --local user.name "plmmilove"
-            git commit dist/*.m3u -m "Add generated file"
-            git push -f
+        run: |
+          git config --local user.email "plmmilove@foxmail.com"
+          git config --local user.name "plmmilove"
+          git commit dist/*.m3u -m "Add generated file"
+          git push -f
