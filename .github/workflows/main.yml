@@ -1,0 +1,29 @@
+name: main
+
+on: [push, pull_request]
+
+jobs:
+  cd:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@main
+
+      - name: Setup node env
+        uses: actions/setup-node@v4.0.2
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: run cypress
+        run: yarn cy:run
+
+      - name: commit generated files
+          run: |
+            git config --local user.email "plmmilove@foxmail.com"
+            git config --local user.name "plmmilove"
+            git commit dist/*.m3u -m "Add generated file"
+            git push -f
