@@ -6,4 +6,9 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
   },
+
+  env: {
+    baseUrl: 'http://tonkiang.us',
+    excludeChannels:['热门', '单音轨', '画中画'],
+  },
 });
