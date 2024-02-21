@@ -39,7 +39,7 @@ describe('TV List', () => {
                 let result = '#EXTM3U\n'
                 Array.from(map.entries()).forEach((v) => {
                     result += epgMap.get(v[0])
-                    result += v[0] + ',' + v[1] + '\n'
+                    result += v[1] + '\n'
                 })
 
                 cy.writeFile(`dist/tv.m3u`, result)
