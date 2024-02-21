@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const m3uFile = 'dist/epg.m3u';
+const m3uFile = 'cypress/fixtures/epg.m3u';
 const jsonFile = 'cypress/fixtures/epg.json';
 
 const channels = [];

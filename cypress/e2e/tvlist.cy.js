@@ -1,36 +1,49 @@
 const cheerio = require("cheerio")
+const epg = require('../fixtures/epg.json')
 
 describe('TV List', () => {
     it('tv list', () => {
         interceptUnusedRequest()
 
-        cy.wrap(["http://tonkiang.us/hotellist.html?s=171.223.215.229:4000"]).each((url) => {
-            cy.intercept('GET', 'http://tonkiang.us/9dlist2.php?s=*&c=false').as('getList')
-            cy.visit(url)
-            cy.wait('@getList')
-        }).get('#hiddenresult > div.tables > div.result')
+        let epgMap = new Map()
+
+        epg.forEach(v => {
+            epgMap.set(v.name, v.extinf)
+        })
+
+        let map = new Map()
+
+        cy.request('http://tonkiang.us/hoteliptv.php?s=' + encodeURIComponent('四川电信'))
+            .then((response) => {
+                let $ = cheerio.load(response.body);
+
+                return $('div.result:lt(2) > div.channel > a').map((i, el) => {
+                    return 'http://tonkiang.us/' + $(el).attr('href')
+                })
+            })
+            .each((url) => {
+                cy.intercept('GET', 'http://tonkiang.us/9dlist2.php?s=*&c=false').as('getList')
+                cy.visit(url)
+                cy.wait('@getList')
+            })
+            .get('#hiddenresult > div.tables > div.result')
             .each(($el) => {
                 let name = $el.children('div.channel').find('div:eq(0)').text().trim()
                 let url = $el.children('div.m3u8').find('td:eq(1)').text().trim()
                 if (name.length === 0 || url.length === 0 || Cypress.env('excludeChannels').some(v => name.includes(v))) {
                     return
                 }
-                cy.log(name, url)
+
+                map.set(name, url)
+            }).then(() => {
+                let result = '#EXTM3U\n'
+                Array.from(map.entries()).forEach((v) => {
+                    result += epgMap.get(v[0])
+                    result += v[0] + ',' + v[1] + '\n'
+                })
+
+                cy.writeFile(`dist/tv.m3u`, result)
             })
-        // cy.request('http://tonkiang.us/hoteliptv.php?s=' + encodeURIComponent('四川电信')).then((response) => {
-        //     let $ = cheerio.load(response.body);
-        //     return $('div.result:lt(2) > div.channel > a').map((i, el) => {
-        //         return 'http://tonkiang.us/' + $(el).attr('href')
-        //     })
-        // }).each((url) => {
-        //     cy.intercept('GET', 'http://tonkiang.us/9dlist2.php?s=*&c=false').as('getList')
-        //     cy.visit(url)
-        //     return cy.wait('@getList').then((intercept) => {
-        //         return cy.parseChannel(intercept.response.body)
-        //     }).then((result) => {
-        //         cy.writeFile(`dist/tv.m3u`, result)
-        //     })
-        // })
     })
 })
 
@@ -47,9 +60,9 @@ function interceptUnusedRequest() {
     //     statusCode: 200
     // })
 
-    // cy.intercept('GET', 'https://*.lijit.com/**', {
-    //     statusCode: 200
-    // })
+    cy.intercept('GET', 'https://*.lijit.com/**', {
+        statusCode: 200
+    })
 
     // cy.intercept('https://*.s-onetag.com/**', {
     //     statusCode: 200
