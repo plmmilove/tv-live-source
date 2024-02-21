@@ -38,7 +38,7 @@ describe('TV List', () => {
             }).then(() => {
                 let result = '#EXTM3U\n'
                 Array.from(map.entries()).forEach((v) => {
-                    result += epgMap.get(v[0])
+                    result += epgMap.get(v[0]) + '\n'
                     result += v[1] + '\n'
                 })
 
