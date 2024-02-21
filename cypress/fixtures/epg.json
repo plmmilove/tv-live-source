@@ -1,0 +1,850 @@
+[
+    {
+        "name": "四川卫视",
+        "extinf": "#EXTINF:-1 tvg-id=\"56\" tvg-name=\"四川卫视\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/ws/sichuan.png\" group-title=\"卫视\",四川卫视\r"
+    },
+    {
+        "name": "四川康巴卫视",
+        "extinf": "#EXTINF:-1 tvg-id=\"70\" tvg-name=\"康巴卫视\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/ws/kangba.png\" group-title=\"卫视\",四川康巴卫视\r"
+    },
+    {
+        "name": "四川公共乡村",
+        "extinf": "#EXTINF:-1 tvg-id=\"2061\" tvg-name=\"SCTV9\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/sheng/sctv9.png\" group-title=\"四川\",四川公共乡村\r"
+    },
+    {
+        "name": "四川妇女儿童",
+        "extinf": "#EXTINF:-1 tvg-id=\"2059\" tvg-name=\"SCTV7\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/sheng/sctv7.png\" group-title=\"四川\",四川妇女儿童\r"
+    },
+    {
+        "name": "四川影视文艺",
+        "extinf": "#EXTINF:-1 tvg-id=\"2057\" tvg-name=\"SCTV5\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/sheng/sctv5.png\" group-title=\"四川\",四川影视文艺\r"
+    },
+    {
+        "name": "四川文化旅游",
+        "extinf": "#EXTINF:-1 tvg-id=\"2054\" tvg-name=\"SCTV2\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/sheng/sctv2.png\" group-title=\"四川\",四川文化旅游\r"
+    },
+    {
+        "name": "四川新闻",
+        "extinf": "#EXTINF:-1 tvg-id=\"2056\" tvg-name=\"SCTV4\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/sheng/sctv4.png\" group-title=\"四川\",四川新闻\r"
+    },
+    {
+        "name": "峨眉电影",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",峨眉电影\r"
+    },
+    {
+        "name": "凤凰中文",
+        "extinf": "#EXTINF:-1 tvg-id=\"141\" tvg-name=\"凤凰中文\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/gt/fenghuangzhongwen.png\" group-title=\"港澳台\",凤凰中文\r"
+    },
+    {
+        "name": "凤凰资讯",
+        "extinf": "#EXTINF:-1 tvg-id=\"142\" tvg-name=\"凤凰资讯\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/gt/fenghuangzixun.png\" group-title=\"港澳台\",凤凰资讯\r"
+    },
+    {
+        "name": "星空",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",星空\r"
+    },
+    {
+        "name": "CHANNEL-V",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",CHANNEL-V\r"
+    },
+    {
+        "name": "CCTV-1高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"1\" tvg-name=\"CCTV1\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/CCTV/CCTV1.png\" group-title=\"央视\",CCTV-1高清\r"
+    },
+    {
+        "name": "CCTV-2高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"2\" tvg-name=\"CCTV2\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/CCTV/CCTV2.png\" group-title=\"央视\",CCTV-2高清\r"
+    },
+    {
+        "name": "CCTV-3高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"3\" tvg-name=\"CCTV3\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/CCTV/CCTV3.png\" group-title=\"央视\",CCTV-3高清\r"
+    },
+    {
+        "name": "CCTV-4高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"4\" tvg-name=\"CCTV4\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/CCTV/CCTV4.png\" group-title=\"央视\",CCTV-4高清\r"
+    },
+    {
+        "name": "CCTV-5高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"5\" tvg-name=\"CCTV5\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/CCTV/CCTV5.png\" group-title=\"央视\",CCTV-5高清\r"
+    },
+    {
+        "name": "CCTV-6高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"7\" tvg-name=\"CCTV6\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/CCTV/CCTV6.png\" group-title=\"央视\",CCTV-6高清\r"
+    },
+    {
+        "name": "CCTV-7高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"8\" tvg-name=\"CCTV7\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/CCTV/CCTV7.png\" group-title=\"央视\",CCTV-7高清\r"
+    },
+    {
+        "name": "CCTV-8高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"9\" tvg-name=\"CCTV8\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/CCTV/CCTV8.png\" group-title=\"央视\",CCTV-8高清\r"
+    },
+    {
+        "name": "CCTV-9高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"10\" tvg-name=\"CCTV9\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/CCTV/CCTV9.png\" group-title=\"央视\",CCTV-9高清\r"
+    },
+    {
+        "name": "CCTV-10高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"11\" tvg-name=\"CCTV10\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/CCTV/CCTV10.png\" group-title=\"央视\",CCTV-10高清\r"
+    },
+    {
+        "name": "CCTV-11高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"12\" tvg-name=\"CCTV11\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/CCTV/CCTV11.png\" group-title=\"央视\",CCTV-11高清\r"
+    },
+    {
+        "name": "CCTV-12高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"13\" tvg-name=\"CCTV12\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/CCTV/CCTV12.png\" group-title=\"央视\",CCTV-12高清\r"
+    },
+    {
+        "name": "CCTV-13高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"14\" tvg-name=\"CCTV13\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/CCTV/CCTV13.png\" group-title=\"央视\",CCTV-13高清\r"
+    },
+    {
+        "name": "CCTV-少儿高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"15\" tvg-name=\"CCTV14\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/CCTV/CCTV14.png\" group-title=\"央视\",CCTV-少儿高清\r"
+    },
+    {
+        "name": "CCTV-15高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"16\" tvg-name=\"CCTV15\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/CCTV/CCTV15.png\" group-title=\"央视\",CCTV-15高清\r"
+    },
+    {
+        "name": "CCTV-17高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"17\" tvg-name=\"CCTV17\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/CCTV/CCTV17.png\" group-title=\"央视\",CCTV-17高清\r"
+    },
+    {
+        "name": "CCTV-5+高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"6\" tvg-name=\"CCTV5+\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/CCTV/CCTV5+.png\" group-title=\"央视\",CCTV-5+高清\r"
+    },
+    {
+        "name": "爱上4K",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",爱上4K\r"
+    },
+    {
+        "name": "爱上4K 17M2160",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",爱上4K 17M2160\r"
+    },
+    {
+        "name": "CGTN英语",
+        "extinf": "#EXTINF:-1 tvg-id=\"20\" tvg-name=\"CGTN\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/CCTV/cgtn.png\" group-title=\"央视\",CGTN英语\r"
+    },
+    {
+        "name": "四川卫视高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"56\" tvg-name=\"四川卫视\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/ws/sichuan.png\" group-title=\"卫视\",四川卫视高清\r"
+    },
+    {
+        "name": "CDTV-1高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"2064\" tvg-name=\"CDTV1\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/sheng/cdtv1.png\" group-title=\"四川\",CDTV-1高清\r"
+    },
+    {
+        "name": "湖南卫视高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"27\" tvg-name=\"湖南卫视\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/ws/hunan.png\" group-title=\"央视\",湖南卫视高清\r"
+    },
+    {
+        "name": "江苏卫视高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"29\" tvg-name=\"江苏卫视\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/ws/jiangsu.png\" group-title=\"卫视\",江苏卫视高清\r"
+    },
+    {
+        "name": "浙江卫视高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"28\" tvg-name=\"浙江卫视\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/ws/zhejiang.png\" group-title=\"卫视\",浙江卫视高清\r"
+    },
+    {
+        "name": "东方卫视高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"31\" tvg-name=\"东方卫视\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/ws/dongfang.png\" group-title=\"卫视\",东方卫视高清\r"
+    },
+    {
+        "name": "北京卫视高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"30\" tvg-name=\"北京卫视\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/ws/beijing.png\" group-title=\"卫视\",北京卫视高清\r"
+    },
+    {
+        "name": "深圳卫视高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"34\" tvg-name=\"深圳卫视\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/ws/shenzhen.png\" group-title=\"卫视\",深圳卫视高清\r"
+    },
+    {
+        "name": "广东卫视高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"33\" tvg-name=\"广东卫视\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/ws/guangdong.png\" group-title=\"卫视\",广东卫视高清\r"
+    },
+    {
+        "name": "天津卫视高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"39\" tvg-name=\"天津卫视\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/ws/tianjin.png\" group-title=\"卫视\",天津卫视高清\r"
+    },
+    {
+        "name": "山东卫视高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"38\" tvg-name=\"山东卫视\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/ws/shandong.png\" group-title=\"卫视\",山东卫视高清\r"
+    },
+    {
+        "name": "SCTV-2高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"2054\" tvg-name=\"SCTV2\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/sheng/sctv2.png\" group-title=\"四川\",SCTV-2高清\r"
+    },
+    {
+        "name": "SCTV-3高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"2055\" tvg-name=\"SCTV3\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/sheng/sctv3.png\" group-title=\"四川\",SCTV-3高清\r"
+    },
+    {
+        "name": "SCTV-4高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"2056\" tvg-name=\"SCTV4\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/sheng/sctv4.png\" group-title=\"四川\",SCTV-4高清\r"
+    },
+    {
+        "name": "SCTV-5高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"2057\" tvg-name=\"SCTV5\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/sheng/sctv5.png\" group-title=\"四川\",SCTV-5高清\r"
+    },
+    {
+        "name": "SCTV-6高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"2059\" tvg-name=\"SCTV7\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/sheng/sctv7.png\" group-title=\"四川\",SCTV-6高清\r"
+    },
+    {
+        "name": "SCTV-7高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",SCTV-7高清\r"
+    },
+    {
+        "name": "SCTV-科教高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"2062\" tvg-name=\"SCTV8\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/sheng/sctv8.png\" group-title=\"四川\",SCTV-科教高清\r"
+    },
+    {
+        "name": "四川乡村高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"7245\" tvg-name=\"中国教育4台\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/qt/中国教育4台.png\" group-title=\"地方\",四川乡村高清\r"
+    },
+    {
+        "name": "康巴卫视高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"70\" tvg-name=\"康巴卫视\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/ws/kangba.png\" group-title=\"卫视\",康巴卫视高清\r"
+    },
+    {
+        "name": "江西卫视高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"50\" tvg-name=\"江西卫视\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/ws/jiangxi.png\" group-title=\"卫视\",江西卫视高清\r"
+    },
+    {
+        "name": "东南卫视高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"41\" tvg-name=\"东南卫视\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/ws/dongnan.png\" group-title=\"卫视\",东南卫视高清\r"
+    },
+    {
+        "name": "黑龙江卫视高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"46\" tvg-name=\"黑龙江卫视\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/ws/heilongjiang.png\" group-title=\"卫视\",黑龙江卫视高清\r"
+    },
+    {
+        "name": "重庆卫视高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"40\" tvg-name=\"重庆卫视\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/ws/chongqing.png\" group-title=\"卫视\",重庆卫视高清\r"
+    },
+    {
+        "name": "贵州卫视高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"44\" tvg-name=\"贵州卫视\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/ws/guizhou.png\" group-title=\"卫视\",贵州卫视高清\r"
+    },
+    {
+        "name": "湖北卫视高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"48\" tvg-name=\"湖北卫视\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/ws/hubei.png\" group-title=\"卫视\",湖北卫视高清\r"
+    },
+    {
+        "name": "安徽卫视高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"32\" tvg-name=\"安徽卫视\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/ws/anhui.png\" group-title=\"卫视\",安徽卫视高清\r"
+    },
+    {
+        "name": "河北卫视高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"45\" tvg-name=\"河北卫视\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/ws/hebei.png\" group-title=\"卫视\",河北卫视高清\r"
+    },
+    {
+        "name": "辽宁卫视高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"36\" tvg-name=\"辽宁卫视\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/ws/liaoning.png\" group-title=\"卫视\",辽宁卫视高清\r"
+    },
+    {
+        "name": "云南卫视高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"58\" tvg-name=\"云南卫视\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/ws/yunnan.png\" group-title=\"卫视\",云南卫视高清\r"
+    },
+    {
+        "name": "河南卫视高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"47\" tvg-name=\"河南卫视\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/ws/henan.png\" group-title=\"卫视\",河南卫视高清\r"
+    },
+    {
+        "name": "广西卫视高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"43\" tvg-name=\"广西卫视\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/ws/guangxi.png\" group-title=\"卫视\",广西卫视高清\r"
+    },
+    {
+        "name": "云南卫视",
+        "extinf": "#EXTINF:-1 tvg-id=\"58\" tvg-name=\"云南卫视\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/ws/yunnan.png\" group-title=\"卫视\",云南卫视\r"
+    },
+    {
+        "name": "吉林卫视高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"51\" tvg-name=\"吉林卫视\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/ws/jilin.png\" group-title=\"卫视\",吉林卫视高清\r"
+    },
+    {
+        "name": "陕西卫视",
+        "extinf": "#EXTINF:-1 tvg-id=\"55\" tvg-name=\"陕西卫视\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/ws/shanxi.png\" group-title=\"卫视\",陕西卫视\r"
+    },
+    {
+        "name": "山西卫视",
+        "extinf": "#EXTINF:-1 tvg-id=\"54\" tvg-name=\"山西卫视\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/ws/shanxi_.png\" group-title=\"卫视\",山西卫视\r"
+    },
+    {
+        "name": "内蒙古卫视",
+        "extinf": "#EXTINF:-1 tvg-id=\"52\" tvg-name=\"内蒙古卫视\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/ws/neimeng.png\" group-title=\"卫视\",内蒙古卫视\r"
+    },
+    {
+        "name": "青海卫视",
+        "extinf": "#EXTINF:-1 tvg-id=\"59\" tvg-name=\"青海卫视\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/ws/qinghai.png\" group-title=\"卫视\",青海卫视\r"
+    },
+    {
+        "name": "宁夏卫视",
+        "extinf": "#EXTINF:-1 tvg-id=\"53\" tvg-name=\"宁夏卫视\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/ws/ningxia.png\" group-title=\"卫视\",宁夏卫视\r"
+    },
+    {
+        "name": "西藏卫视",
+        "extinf": "#EXTINF:-1 tvg-id=\"71\" tvg-name=\"西藏卫视\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/ws/xizang.png\" group-title=\"卫视\",西藏卫视\r"
+    },
+    {
+        "name": "新疆卫视",
+        "extinf": "#EXTINF:-1 tvg-id=\"57\" tvg-name=\"新疆卫视\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/ws/xinjiang.png\" group-title=\"卫视\",新疆卫视\r"
+    },
+    {
+        "name": "甘肃卫视高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"42\" tvg-name=\"甘肃卫视\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/ws/gansu.png\" group-title=\"卫视\",甘肃卫视高清\r"
+    },
+    {
+        "name": "海南卫视",
+        "extinf": "#EXTINF:-1 tvg-id=\"37\" tvg-name=\"旅游卫视\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/ws/lvyou.png\" group-title=\"卫视\",海南卫视\r"
+    },
+    {
+        "name": "陕西农林",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",陕西农林\r"
+    },
+    {
+        "name": "兵团卫视",
+        "extinf": "#EXTINF:-1 tvg-id=\"61\" tvg-name=\"兵团卫视\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/ws/bingtuan.png\" group-title=\"卫视\",兵团卫视\r"
+    },
+    {
+        "name": "峨眉电影高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",峨眉电影高清\r"
+    },
+    {
+        "name": "厦门卫视",
+        "extinf": "#EXTINF:-1 tvg-id=\"68\" tvg-name=\"厦门卫视\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/ws/xiamen.png\" group-title=\"卫视\",厦门卫视\r"
+    },
+    {
+        "name": "三沙卫视",
+        "extinf": "#EXTINF:-1 tvg-id=\"72\" tvg-name=\"三沙卫视\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/ws/sansha.png\" group-title=\"卫视\",三沙卫视\r"
+    },
+    {
+        "name": "山东教育卫视",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",山东教育卫视\r"
+    },
+    {
+        "name": "CDTV-2",
+        "extinf": "#EXTINF:-1 tvg-id=\"2065\" tvg-name=\"CDTV2\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/sheng/cdtv2.png\" group-title=\"四川\",CDTV-2\r"
+    },
+    {
+        "name": "CDTV-3",
+        "extinf": "#EXTINF:-1 tvg-id=\"2066\" tvg-name=\"CDTV3\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/sheng/cdtv3.png\" group-title=\"四川\",CDTV-3\r"
+    },
+    {
+        "name": "CDTV-4",
+        "extinf": "#EXTINF:-1 tvg-id=\"2067\" tvg-name=\"CDTV4\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/sheng/cdtv4.png\" group-title=\"四川\",CDTV-4\r"
+    },
+    {
+        "name": "CDTV-5高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"2068\" tvg-name=\"CDTV5\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/sheng/cdtv5.png\" group-title=\"四川\",CDTV-5高清\r"
+    },
+    {
+        "name": "CDTV-6",
+        "extinf": "#EXTINF:-1 tvg-id=\"2069\" tvg-name=\"CDTV6\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/sheng/cdtv6.png\" group-title=\"四川\",CDTV-6\r"
+    },
+    {
+        "name": "CDTV-8高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",CDTV-8高清\r"
+    },
+    {
+        "name": "上海纪实高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"1988\" tvg-name=\"上海纪实\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/ws/shanghaijishi.png\" group-title=\"上海\",上海纪实高清\r"
+    },
+    {
+        "name": "金鹰纪实高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"2025\" tvg-name=\"金鹰纪实\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/ws/jinyingjishi.png\" group-title=\"地方\",金鹰纪实高清\r"
+    },
+    {
+        "name": "CETV-1高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"73\" tvg-name=\"中国教育1台\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/qt/中国教育1台.png\" group-title=\"地方\",CETV-1高清\r"
+    },
+    {
+        "name": "熊猫新闻高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",熊猫新闻高清\r"
+    },
+    {
+        "name": "熊猫体娱高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",熊猫体娱高清\r"
+    },
+    {
+        "name": "熊猫少儿高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",熊猫少儿高清\r"
+    },
+    {
+        "name": "熊猫影院高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",熊猫影院高清\r"
+    },
+    {
+        "name": "睛彩四川",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",睛彩四川\r"
+    },
+    {
+        "name": "成都体育高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",成都体育高清\r"
+    },
+    {
+        "name": "熊猫频道高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",熊猫频道高清\r"
+    },
+    {
+        "name": "金熊猫卡通高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",金熊猫卡通高清\r"
+    },
+    {
+        "name": "炫动卡通",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",炫动卡通\r"
+    },
+    {
+        "name": "嘉佳卡通",
+        "extinf": "#EXTINF:-1 tvg-id=\"6010\" tvg-name=\"嘉佳卡通\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/qt/jiajiakt.png\" group-title=\"地方\",嘉佳卡通\r"
+    },
+    {
+        "name": "收视导视高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",收视导视高清\r"
+    },
+    {
+        "name": "熊猫爱生活高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",熊猫爱生活高清\r"
+    },
+    {
+        "name": "大爱四川高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"6027\" tvg-name=\"大爱一台\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/gt/daai.png\" group-title=\"港澳台\",大爱四川高清\r"
+    },
+    {
+        "name": "大爱旅游高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"6027\" tvg-name=\"大爱一台\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/gt/daai.png\" group-title=\"港澳台\",大爱旅游高清\r"
+    },
+    {
+        "name": "大爱生活高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"6027\" tvg-name=\"大爱一台\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/gt/daai.png\" group-title=\"港澳台\",大爱生活高清\r"
+    },
+    {
+        "name": "大爱时尚高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"6027\" tvg-name=\"大爱一台\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/gt/daai.png\" group-title=\"港澳台\",大爱时尚高清\r"
+    },
+    {
+        "name": "HD看电影",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",HD看电影\r"
+    },
+    {
+        "name": "家政频道高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",家政频道高清\r"
+    },
+    {
+        "name": "CETV-2",
+        "extinf": "#EXTINF:-1 tvg-id=\"74\" tvg-name=\"中国教育2台\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/qt/中国教育2台.png\" group-title=\"地方\",CETV-2\r"
+    },
+    {
+        "name": "CETV-4",
+        "extinf": "#EXTINF:-1 tvg-id=\"7245\" tvg-name=\"中国教育4台\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/qt/中国教育4台.png\" group-title=\"地方\",CETV-4\r"
+    },
+    {
+        "name": "经典电影",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",经典电影\r"
+    },
+    {
+        "name": "华语影院",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",华语影院\r"
+    },
+    {
+        "name": "星光院线",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",星光院线\r"
+    },
+    {
+        "name": "全球大片",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",全球大片\r"
+    },
+    {
+        "name": "热播剧场",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",热播剧场\r"
+    },
+    {
+        "name": "港剧风云",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",港剧风云\r"
+    },
+    {
+        "name": "谍战剧场",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",谍战剧场\r"
+    },
+    {
+        "name": "卡酷动画",
+        "extinf": "#EXTINF:-1 tvg-id=\"67\" tvg-name=\"卡酷动画\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/qt/kaku.png\" group-title=\"卫视\",卡酷动画\r"
+    },
+    {
+        "name": "金鹰卡通",
+        "extinf": "#EXTINF:-1 tvg-id=\"69\" tvg-name=\"金鹰卡通\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/qt/jinyingkatong.png\" group-title=\"卫视\",金鹰卡通\r"
+    },
+    {
+        "name": "优漫卡通",
+        "extinf": "#EXTINF:-1 tvg-id=\"1046\" tvg-name=\"优漫卡通\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/qt/youman.png\" group-title=\"地方\",优漫卡通\r"
+    },
+    {
+        "name": "宝宝动画高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",宝宝动画高清\r"
+    },
+    {
+        "name": "少儿动画高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",少儿动画高清\r"
+    },
+    {
+        "name": "青春动漫",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",青春动漫\r"
+    },
+    {
+        "name": "音乐现场高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",音乐现场高清\r"
+    },
+    {
+        "name": "戏曲精选",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",戏曲精选\r"
+    },
+    {
+        "name": "戏曲",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",戏曲\r"
+    },
+    {
+        "name": "魅力时尚高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",魅力时尚高清\r"
+    },
+    {
+        "name": "生活时尚",
+        "extinf": "#EXTINF:-1 tvg-id=\"1981\" tvg-name=\"生活时尚\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/qt/shenghuoshishang.png\" group-title=\"上海\",生活时尚\r"
+    },
+    {
+        "name": "爱生活高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",爱生活高清\r"
+    },
+    {
+        "name": "汽摩高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"6573\" tvg-name=\"汽摩\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/qt/CCTVPAYFEE22.jpg\" group-title=\"地方\",汽摩高清\r"
+    },
+    {
+        "name": "财富天下",
+        "extinf": "#EXTINF:-1 tvg-id=\"6623\" tvg-name=\"财富天下\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/qt/财富天下.png\" group-title=\"地方\",财富天下\r"
+    },
+    {
+        "name": "股评汇",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",股评汇\r"
+    },
+    {
+        "name": "爱体育",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",爱体育\r"
+    },
+    {
+        "name": "电竞天堂高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"85\" tvg-name=\"电竞天堂\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/qt/dianjingtiantang.png\" group-title=\"地方\",电竞天堂高清\r"
+    },
+    {
+        "name": "游戏风云",
+        "extinf": "#EXTINF:-1 tvg-id=\"1983\" tvg-name=\"游戏风云\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/qt/youxifengyun.png\" group-title=\"上海\",游戏风云\r"
+    },
+    {
+        "name": "汽车频道",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",汽车频道\r"
+    },
+    {
+        "name": "足球高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",足球高清\r"
+    },
+    {
+        "name": "高网高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",高网高清\r"
+    },
+    {
+        "name": "台球高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",台球高清\r"
+    },
+    {
+        "name": "纪实人文",
+        "extinf": "#EXTINF:-1 tvg-id=\"1988\" tvg-name=\"上海纪实\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/ws/shanghaijishi.png\" group-title=\"上海\",纪实人文\r"
+    },
+    {
+        "name": "墨宝高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",墨宝高清\r"
+    },
+    {
+        "name": "军事高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",军事高清\r"
+    },
+    {
+        "name": "解密高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",解密高清\r"
+    },
+    {
+        "name": "地理高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",地理高清\r"
+    },
+    {
+        "name": "传奇",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",传奇\r"
+    },
+    {
+        "name": "导视",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",导视\r"
+    },
+    {
+        "name": "收视指南",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",收视指南\r"
+    },
+    {
+        "name": "资讯新干线",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",资讯新干线\r"
+    },
+    {
+        "name": "蓉城先锋",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",蓉城先锋\r"
+    },
+    {
+        "name": "星空精选高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",星空精选高清\r"
+    },
+    {
+        "name": "东方财经高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",东方财经高清\r"
+    },
+    {
+        "name": "CGTN西班牙语",
+        "extinf": "#EXTINF:-1 tvg-id=\"20\" tvg-name=\"CGTN\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/CCTV/cgtn.png\" group-title=\"央视\",CGTN西班牙语\r"
+    },
+    {
+        "name": "CGTN法语",
+        "extinf": "#EXTINF:-1 tvg-id=\"20\" tvg-name=\"CGTN\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/CCTV/cgtn.png\" group-title=\"央视\",CGTN法语\r"
+    },
+    {
+        "name": "百姓健康",
+        "extinf": "#EXTINF:-1 tvg-id=\"6627\" tvg-name=\"百姓健康\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/qt/CHTV.jpg\" group-title=\"地方\",百姓健康\r"
+    },
+    {
+        "name": "爱怀旧高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",爱怀旧高清\r"
+    },
+    {
+        "name": "爱喜剧高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",爱喜剧高清\r"
+    },
+    {
+        "name": "爱奇谈高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",爱奇谈高清\r"
+    },
+    {
+        "name": "爱科幻高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",爱科幻高清\r"
+    },
+    {
+        "name": "爱院线高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",爱院线高清\r"
+    },
+    {
+        "name": "都市剧场",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",都市剧场\r"
+    },
+    {
+        "name": "爱谍战高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",爱谍战高清\r"
+    },
+    {
+        "name": "爱经典高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",爱经典高清\r"
+    },
+    {
+        "name": "爱悬疑高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",爱悬疑高清\r"
+    },
+    {
+        "name": "爱青春高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",爱青春高清\r"
+    },
+    {
+        "name": "爱都市高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",爱都市高清\r"
+    },
+    {
+        "name": "少儿天地",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",少儿天地\r"
+    },
+    {
+        "name": "爱幼教高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",爱幼教高清\r"
+    },
+    {
+        "name": "爱玩具高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",爱玩具高清\r"
+    },
+    {
+        "name": "爱动漫高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",爱动漫高清\r"
+    },
+    {
+        "name": "求索频道高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",求索频道高清\r"
+    },
+    {
+        "name": "爱电竞高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",爱电竞高清\r"
+    },
+    {
+        "name": "爱赛车高清",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",爱赛车高清\r"
+    },
+    {
+        "name": "爱宠宠物",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",爱宠宠物\r"
+    },
+    {
+        "name": "环球旅游",
+        "extinf": "#EXTINF:-1 tvg-id=\"6608\" tvg-name=\"环球旅游\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/qt/BAMC6.jpg\" group-title=\"地方\",环球旅游\r"
+    },
+    {
+        "name": "来钓鱼吧",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",来钓鱼吧\r"
+    },
+    {
+        "name": "麻辣体育",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",麻辣体育\r"
+    },
+    {
+        "name": "绚影4K",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",绚影4K\r"
+    },
+    {
+        "name": "先锋乒羽",
+        "extinf": "#EXTINF:-1 tvg-id=\"6602\" tvg-name=\"先锋乒羽\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/qt/XFBY.png\" group-title=\"地方\",先锋乒羽\r"
+    },
+    {
+        "name": "天元围棋",
+        "extinf": "#EXTINF:-1 tvg-id=\"6578\" tvg-name=\"天元围棋\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/qt/TIANYUANWEIQI.jpg\" group-title=\"地方\",天元围棋\r"
+    },
+    {
+        "name": "快乐垂钓",
+        "extinf": "#EXTINF:-1 tvg-id=\"6595\" tvg-name=\"快乐垂钓\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/qt/KUAILECHUIDIAO.jpg\" group-title=\"地方\",快乐垂钓\r"
+    },
+    {
+        "name": "茶频道",
+        "extinf": "#EXTINF:-1 tvg-id=\"6585\" tvg-name=\"茶频道\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/qt/DOCUMENTARY-CHANNEL.jpg\" group-title=\"地方\",茶频道\r"
+    },
+    {
+        "name": "热血剧场",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",热血剧场\r"
+    },
+    {
+        "name": "乐龄学堂",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",乐龄学堂\r"
+    },
+    {
+        "name": "亲子趣学4K",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",亲子趣学4K\r"
+    },
+    {
+        "name": "津津悦读4K",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",津津悦读4K\r"
+    },
+    {
+        "name": "动画番剧",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",动画番剧\r"
+    },
+    {
+        "name": "中录动漫4K",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",中录动漫4K\r"
+    },
+    {
+        "name": "熊猫24小时",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",熊猫24小时\r"
+    },
+    {
+        "name": "综艺咖秀",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",综艺咖秀\r"
+    },
+    {
+        "name": "红色经典",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",红色经典\r"
+    },
+    {
+        "name": "4K超高清电影",
+        "extinf": "#EXTINF:-1 tvg-id=\"7245\" tvg-name=\"中国教育4台\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/qt/中国教育4台.png\" group-title=\"地方\",4K超高清电影\r"
+    },
+    {
+        "name": "4K乐享超清",
+        "extinf": "#EXTINF:-1 tvg-id=\"7245\" tvg-name=\"中国教育4台\" tvg-logo=\"http://epg.51zmt.top:8000/tb1/qt/中国教育4台.png\" group-title=\"地方\",4K乐享超清\r"
+    },
+    {
+        "name": "i成都",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",i成都\r"
+    },
+    {
+        "name": "中国体育1",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",中国体育1\r"
+    },
+    {
+        "name": "中国体育2",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",中国体育2\r"
+    },
+    {
+        "name": "中国体育3",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",中国体育3\r"
+    },
+    {
+        "name": "精彩推荐",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",精彩推荐\r"
+    },
+    {
+        "name": "直播室1",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",直播室1\r"
+    },
+    {
+        "name": "直播室2",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",直播室2\r"
+    },
+    {
+        "name": "直播室3",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",直播室3\r"
+    },
+    {
+        "name": "直播室4",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",直播室4\r"
+    },
+    {
+        "name": "直播室5",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",直播室5\r"
+    },
+    {
+        "name": "直播室6",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",直播室6\r"
+    },
+    {
+        "name": "直播室7",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",直播室7\r"
+    },
+    {
+        "name": "直播室8",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",直播室8\r"
+    },
+    {
+        "name": "红原日干乔",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",红原日干乔\r"
+    },
+    {
+        "name": "红原月亮湾",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",红原月亮湾\r"
+    },
+    {
+        "name": "电信导视3",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",电信导视3\r"
+    },
+    {
+        "name": "雅克音乐节直播",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",雅克音乐节直播\r"
+    },
+    {
+        "name": "雅克音乐节宣传",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",雅克音乐节宣传\r"
+    },
+    {
+        "name": "云演艺宣传",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",云演艺宣传\r"
+    },
+    {
+        "name": "创新及人才文化节",
+        "extinf": "#EXTINF:-1 tvg-id=\"\" tvg-name=\"\" tvg-logo=\"\" group-title=\"未分类\",创新及人才文化节\r"
+    }
+]
