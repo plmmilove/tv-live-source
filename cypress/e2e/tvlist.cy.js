@@ -38,7 +38,8 @@ describe('TV List', () => {
             }).then(() => {
                 let result = '#EXTM3U\n'
                 Array.from(map.entries()).forEach((v) => {
-                    result += epgMap.get(v[0]) + '\n'
+                    let extinf = epgMap.get(v[0]) || `#EXTINF:-1 tvg-id="" tvg-name="${v[0]}" tvg-logo="" group-title="未分类",${v[0]}`
+                    result += extinf + '\n'
                     result += v[1] + '\n'
                 })
 
