@@ -13,7 +13,7 @@ http://182.149.98.168:55555/udp/239.93.1.195:5140
 http://182.149.98.168:55555/udp/239.93.1.20:5140
 #EXTINF:-1 tvg-id="2056" tvg-name="SCTV4" tvg-logo="http://epg.51zmt.top:8000/tb1/sheng/sctv4.png" group-title="四川",四川新闻
 http://182.149.98.168:55555/udp/239.93.0.47:5140
-undefined
+#EXTINF:-1 tvg-id="" tvg-name="四川经济" tvg-logo="" group-title="未分类",四川经济
 http://182.149.98.168:55555/udp/239.93.1.16:5140
 #EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="未分类",峨眉电影
 http://182.149.98.168:55555/udp/239.93.1.18:5140
@@ -57,7 +57,7 @@ http://182.149.98.168:55555/udp/239.93.1.29:6000
 http://182.149.98.168:55555/udp/239.93.0.103:5140
 #EXTINF:-1 tvg-id="17" tvg-name="CCTV17" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV17.png" group-title="央视",CCTV-17高清
 http://182.149.98.168:55555/udp/239.93.0.92:5140
-undefined
+#EXTINF:-1 tvg-id="" tvg-name="CCTV-5＋高清" tvg-logo="" group-title="未分类",CCTV-5＋高清
 http://182.149.98.168:55555/udp/239.93.1.36:8004
 #EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="未分类",爱上4K
 http://182.149.98.168:55555/udp/239.93.0.97:5140
