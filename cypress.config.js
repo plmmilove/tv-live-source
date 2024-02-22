@@ -1,5 +1,5 @@
 const { defineConfig } = require("cypress");
-const cyAwaitPreprocessor = require('cypress-await/src/preprocessor')
+const cyAwaitPreprocessor = require('cypress-await/src/preprocessor-sync-mode')
 
 module.exports = defineConfig({
   e2e: {
