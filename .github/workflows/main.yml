@@ -33,8 +33,8 @@ jobs:
         run: |
           git config --local user.email "plmmilove@foxmail.com"
           git config --local user.name "plmmilove"
-          git add dist/*.m3u
-          git commit dist/*.m3u -m "Add generated file"
+          git add dist/*
+          git commit dist/* -m "Add generated file"
           git push -f
 
       - name: Deploy
