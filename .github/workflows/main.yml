@@ -11,7 +11,11 @@ on:
       - opened
   workflow_dispatch:
     inputs:
-      description: 'manual run'
+      args:
+        src:
+          description: 'multicast ips'
+          type: array
+          required: false
 
 jobs:
   release:
