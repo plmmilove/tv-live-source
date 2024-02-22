@@ -10,7 +10,7 @@ describe('TV List', () => {
             return acc;
         }, new Map());
 
-        let srcList
+        let srcList = []
         if (Cypress.env('multicast_ips')) {
             srcList = JSON.parse(Cypress.env('multicast_ips'))
         } else {
