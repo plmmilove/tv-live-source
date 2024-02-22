@@ -46,6 +46,8 @@ describe('TV List', () => {
                 }
             })
         })
+
+        cy.writeFile(`dist/index.html`, new Date())
     })
 })
 
