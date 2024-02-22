@@ -11,7 +11,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cheerio": "^1.0.0-rc.12"
+    "cheerio": "^1.0.0-rc.12",
+    "cross-env": "^7.0.3"
   },
   "devDependencies": {
     "cypress": "^13.6.4",

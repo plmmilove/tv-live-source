@@ -5,6 +5,11 @@ module.exports = defineConfig({
   e2e: {
     setupNodeEvents(on, config) {
       on('file:preprocessor', cyAwaitPreprocessor())
+      config.env = {
+        ...process.env,
+        ...config.env
+      }
+      return config
     },
   },
 

@@ -10,13 +10,18 @@ describe('TV List', () => {
             return acc;
         }, new Map());
 
-        let srcList = cy.request('http://tonkiang.us/hoteliptv.php?s=' + encodeURIComponent('四川电信'))
-            .then((response) => {
-                let $ = cheerio.load(response.body);
-                return $('div.result:lt(3) > div.channel > a').map((i, el) => {
-                    return $(el).text().trim()
-                }).toArray()
-            })
+        let srcList
+        if (Cypress.env('multicast_ips')) {
+            srcList = JSON.parse(Cypress.env('multicast_ips'))
+        } else {
+            srcList = cy.request('http://tonkiang.us/hoteliptv.php?s=' + encodeURIComponent('四川电信'))
+                .then((response) => {
+                    let $ = cheerio.load(response.body);
+                    return $('div.result:lt(3) > div.channel > a').map((i, el) => {
+                        return $(el).text().trim()
+                    }).toArray()
+                })
+        }
 
         srcList.map((src, idx) => {
             let url = 'http://tonkiang.us/hotellist.html?s=' + src
