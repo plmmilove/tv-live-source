@@ -1,4 +1,3 @@
-const cheerio = require("cheerio")
 const epg = require('../fixtures/epg.json')
 
 describe('TV List', () => {
@@ -10,18 +9,12 @@ describe('TV List', () => {
             return acc;
         }, new Map());
 
-        let srcList
-        if (Cypress.env('multicast_ips')) {
-            srcList = JSON.parse(Cypress.env('multicast_ips'))
-        } else {
-            srcList = cy.request('http://tonkiang.us/hoteliptv.php?s=' + encodeURIComponent('四川电信'))
-                .then((response) => {
-                    let $ = cheerio.load(response.body);
-                    return $('div.result:lt(3) > div.channel > a').map((i, el) => {
-                        return $(el).text().trim()
-                    }).toArray()
-                })
-        }
+        let srcList = cy.request('http://tonkiang.us/hoteliptv.php?s=' + encodeURIComponent('四川电信'))
+            .then((response) => {
+                return cy.wrap(Cypress.$(response.body).find('div.result:lt(3) > div.channel > a').map((i, el) => {
+                    return Cypress.$(el).text().trim()
+                }).toArray())
+            })
 
         srcList.map((src, idx) => {
             let url = 'http://tonkiang.us/hotellist.html?s=' + src
@@ -52,7 +45,7 @@ describe('TV List', () => {
             })
         })
 
-        cy.writeFile(`dist/index.html`, new Date())
+        cy.writeFile(`dist/index.html`, new Date().toLocaleString())
     })
 })
 

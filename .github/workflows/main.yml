@@ -17,7 +17,7 @@ on:
           type: string
           required: false
           default: '["171.223.215.229:4000"]'
-          
+
 jobs:
   release:
     runs-on: ubuntu-latest
