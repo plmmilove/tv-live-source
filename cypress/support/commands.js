@@ -1,5 +1,6 @@
 Cypress.Commands.add('getMulticastIps', () => {
     let ips = Cypress.env('multicast_ips')
+    console.log(ips)
     let ipArray
     if (ips == null || ips.length === 0) {
         ipArray = cy.request('http://tonkiang.us/hoteliptv.php?s=' + encodeURIComponent('四川电信'))

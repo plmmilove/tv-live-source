@@ -11,11 +11,10 @@ on:
       - opened
   workflow_dispatch:
     inputs:
-      args:
-        multicast_ips:
-          description: 'multicast ips'
-          type: string
-          required: false
+      multicast_ips:
+        description: 'multicast ips'
+        type: string
+        required: false
 
 jobs:
   release:
@@ -36,7 +35,7 @@ jobs:
       - name: run cypress
         run: yarn cy:run
         env:
-          multicast_ips: '${{ github.event.inputs.args.multicast_ips }}'
+          multicast_ips: '${{ github.event.inputs.multicast_ips }}'
 
       - name: commit generated files
         run: |
