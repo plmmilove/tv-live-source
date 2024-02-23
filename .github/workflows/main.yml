@@ -16,7 +16,6 @@ on:
           description: 'multicast ips'
           type: string
           required: false
-          default: '["171.223.215.229:4000"]'
 
 jobs:
   release:
@@ -37,7 +36,7 @@ jobs:
       - name: run cypress
         run: yarn cy:run
         env:
-          multicast_ips: '${{ toJson(github.event.inputs.args.multicast_ips) }}'
+          multicast_ips: '${{ github.event.inputs.args.multicast_ips }}'
 
       - name: commit generated files
         run: |
