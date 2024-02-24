@@ -1,14 +1,6 @@
 name: crawl tv live source & release
 
 on:
-  schedule:
-    - cron: '0 8 * * *'
-  push:
-    branches:
-      - main
-  pull_request:
-    types:
-      - opened
   workflow_dispatch:
     inputs:
       multicast_ips:
