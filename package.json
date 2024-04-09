@@ -5,12 +5,14 @@
   "main": "src/tv_list.js",
   "scripts": {
     "cy:open": "cypress open --e2e --browser chrome",
-    "cy:run": "cypress run --browser chrome --headless --e2e 'cypress/e2e/tv_list.cy.js'"
+    "cy:run": "cypress run --browser chrome --headless --e2e 'cypress/e2e/tv_list.cy.js'",
+    "extract-tv": "node extractTvs.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
     "cross-env": "^7.0.3"
   },
   "devDependencies": {

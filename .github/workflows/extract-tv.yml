@@ -1,0 +1,44 @@
+name: extract tv
+
+on:
+  workflow_dispatch:
+    inputs:
+      html:
+        description: 'html'
+        type: string
+        required: true
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@main
+
+      - name: Setup node env
+        uses: actions/setup-node@v4.0.2
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: run extract
+        run: yarn extract-tv
+        env:
+          html: '${{ github.event.inputs.html }}'
+
+      - name: commit generated files
+        run: |
+          git config --local user.email "plmmilove@foxmail.com"
+          git config --local user.name "plmmilove"
+          git add dist/*
+          git commit dist/* -m "Add generated file"
+          git push -f
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3.9.3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
