@@ -1,12 +1,6 @@
 name: extract tv
 
-on:
-  workflow_dispatch:
-    inputs:
-      html:
-        description: 'html'
-        type: string
-        required: true
+on: workflow_dispatch
 
 jobs:
   release:
@@ -26,8 +20,6 @@ jobs:
 
       - name: run extract
         run: yarn extract-tv
-        env:
-          html: '${{ github.event.inputs.html }}'
 
       - name: commit generated files
         run: |

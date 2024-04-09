@@ -1,6 +1,9 @@
 const cheerio = require("cheerio");
+const fs = require("fs");
 
-let html = process.env.html || ''
+let html = fs.readFileSync('./tv.html', 'utf8')
+console.log(html)
+
 if(html.length === 0) {
     console.log('empty html')
     return
@@ -21,13 +24,12 @@ $('div.result').each((i, el) => {
     map.set(name, v)
 })
 
-const epg = require('./fixtures/epg.json')
-const fs = require("fs");
+const epg = require('./cypress/fixtures/epg.json')
+
 let epgMap = epg.reduce((acc, o) => {
     acc.set(o.name, o.extinf);
     return acc;
 }, new Map());
-
 
 let result = '#EXTM3U\n'
 if (map.size > 0) {
