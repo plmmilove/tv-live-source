@@ -31,20 +31,31 @@ let epgMap = epg.reduce((acc, o) => {
     return acc;
 }, new Map());
 
-let result = '#EXTM3U\n'
+let resultM3u = '#EXTM3U\n'
+let resultTxt = ''
 if (map.size > 0) {
     Array.from(map.entries()).forEach((v) => {
         let extinf = epgMap.get(v[0]) || `#EXTINF:-1 tvg-id="" tvg-name="${v[0]}" tvg-logo="" group-title="未分类",${v[0]}`
-        result += extinf + '\n'
-        result += v[1] + '\n'
+        resultM3u += extinf + '\n'
+        resultM3u += v[1] + '\n'
+
+        resultTxt += v[0] + "," + v[1] + "\n"
     })
 
-    fs.writeFile('./dist/tv.m3u', result, (err) => {
+    fs.writeFile('./dist/tv.m3u', resultM3u, (err) => {
         if (err) {
             console.error(err);
             return;
         }
         console.log('tv.m3u created.');
+    });
+
+    fs.writeFile('./dist/tv.txt', resultTxt, (err) => {
+        if (err) {
+            console.error(err);
+            return;
+        }
+        console.log('tv.txt created.');
     });
     fs.writeFileSync(`./dist/index.html`, new Date().toLocaleString())
 }
