@@ -6,7 +6,8 @@
   "scripts": {
     "cy:open": "cypress open --e2e --browser chrome",
     "cy:run": "cypress run --browser chrome --headless --e2e 'cypress/e2e/tv_list.cy.js'",
-    "extract-tv": "node extractTvs.js"
+    "extract-tv": "node extractTvs.js && npm run copy-assets",
+    "copy-assets": "cp -rv js dist"
   },
   "keywords": [],
   "author": "",
