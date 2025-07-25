@@ -43,15 +43,32 @@ module.exports = {
         }
     },
     async getMediaSource(musicItem, quality) {
-        const rawHtml = (
-          await axios.get(musicItem.url)
-        ).data;
+        const resp = await fetch("https://www.qeecc.com/js/play.php", {
+            "headers": {
+                "accept": "application/json, text/javascript, */*; q=0.01",
+                "accept-language": "zh-CN,zh;q=0.9",
+                "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+                "priority": "u=1, i",
+                "sec-ch-ua": "\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-ch-ua-platform": "\"Windows\"",
+                "sec-fetch-dest": "empty",
+                "sec-fetch-mode": "cors",
+                "sec-fetch-site": "same-origin",
+                "x-requested-with": "XMLHttpRequest",
+                "Referer": musicItem.url
+            },
+            "body": "id=" + musicItem.id + "&type=music",
+            "method": "POST"
+        });
 
-        const $ = cheerio.load(rawHtml);
-        const url = $('#player > audio').attr('src')
+        let data = await resp.text()
+
+        data = JSON.parse(data)
+        musicItem.artwork = data.pic
 
         return {
-            url: url,
+            url: data.url,
             quality: "standard"
         };
     },
