@@ -99,13 +99,13 @@ module.exports = {
         /** 专辑封面图 */
         artwork: cover[1],
         /** 默认音源 */
-        url: 'https://er-sycdn.kuwo.cn/1ec38252ed5dcd95c09e8aad17be7ad7/68874253/resource/30106/trackmedia/M800003l65FZ3gHIt1.mp3'
+        url: resp.data.data.url
     }
   },
 
   async getMediaSource(musicItem, quality) {
     return {
-      url: 'https://er-sycdn.kuwo.cn/1ec38252ed5dcd95c09e8aad17be7ad7/68874253/resource/30106/trackmedia/M800003l65FZ3gHIt1.mp3',
+      url: musicItem.url,
       quality: 'standard',
     }
   },
