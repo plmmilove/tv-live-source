@@ -23,25 +23,35 @@ module.exports = {
                 const id = href.slice(6, -5)
                 const title = txt.substring(txt.indexOf('《') + 1, txt.indexOf('》')).trim()
                 const artist = txt.substring(0, txt.indexOf('《')).trim()
-                const artwork = ''
-                const url = 'https://www.qeecc.com' + href
-                const album = '';
 
                 searchResults.push({
                     id,
                     title,
                     artist,
-                    artwork,
-                    album,
-                    url
                 })
             });
             return {
-                isEnd: true,
+                isEnd: false,
                 data: searchResults
             }
         }
     },
+
+    async getMusicInfo(musicBase) {
+        const rawHtml = (
+            await axios.get(`https://www.qeecc.com/song/${musicBase.id}.html`)
+        ).data
+
+        const $ = cheerio.load(rawHtml);
+        const cover = $("#mcover").attr('src')
+
+        return {
+            duration: 300,
+            /** 专辑封面图 */
+            artwork: cover,
+        }
+    },
+
     async getMediaSource(musicItem, quality) {
         const resp = await fetch("https://www.qeecc.com/js/play.php", {
             "headers": {
@@ -56,7 +66,7 @@ module.exports = {
                 "sec-fetch-mode": "cors",
                 "sec-fetch-site": "same-origin",
                 "x-requested-with": "XMLHttpRequest",
-                "Referer": musicItem.url
+                "Referer": `https://www.qeecc.com/song/${musicItem.id}.html`
             },
             "body": "id=" + musicItem.id + "&type=music",
             "method": "POST"
@@ -65,7 +75,6 @@ module.exports = {
         let data = await resp.text()
 
         data = JSON.parse(data)
-        musicItem.artwork = data.pic
 
         return {
             url: data.url,
