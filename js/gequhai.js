@@ -92,6 +92,8 @@ module.exports = {
 
     const resp = await axios.request(config)
 
+    console.log(resp)
+
     return {
         artist: author[1],
         title: title[1],
@@ -104,7 +106,7 @@ module.exports = {
 
   async getMediaSource(musicItem, quality) {
     return {
-      url: musicItem.url,
+      url: 'https://er-sycdn.kuwo.cn/1ec38252ed5dcd95c09e8aad17be7ad7/68874253/resource/30106/trackmedia/M800003l65FZ3gHIt1.mp3',
       quality: 'standard',
     }
   },
