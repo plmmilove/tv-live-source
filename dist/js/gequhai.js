@@ -1,6 +1,5 @@
 const axios = require('axios')
 const cheerio = require('cheerio')
-const querystring = require('querystring')
 
 module.exports = {
   platform: 'gequhai',
@@ -8,7 +7,7 @@ module.exports = {
   cacheControl: 'no-store',
   async search(query, page, type) {
     if (type === 'music') {
-      query = querystring.escape(query)
+      query = encodeURIComponent(query)
       const rawHtml = (
         await axios.get(`https://www.gequhai.com/s/${query}`)
       ).data
@@ -65,7 +64,7 @@ module.exports = {
       console.log('play_id:', match[1])
     }
 
-    let data = `id=${querystring.escape(match[1])}`
+    let data = `id=${encodeURIComponent(match[1])}`
 
     let config = {
       method: 'post',
