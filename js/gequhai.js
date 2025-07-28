@@ -103,55 +103,8 @@ module.exports = {
   },
 
   async getMediaSource(musicItem, quality) {
-    const rawHtml = (
-      await axios.get(musicItem.url)
-    ).data
-
-    const coverReg = /mp3_cover\s*=\s*['"]([^'"]+)['"]/
-    const cover = rawHtml.match(coverReg)
-    if (cover) {
-      musicItem.artwork = cover[1]
-    }
-
-    const playIdReg = /play_id\s*=\s*['"]([^'"]+)['"]/
-
-    const match = rawHtml.match(playIdReg)
-    if (!match) {
-      throw new Error('无法找到播放ID')
-    } else {
-      console.log('play_id:', match[1])
-    }
-
-    let data = `id=${encodeURIComponent(match[1])}`
-
-    let config = {
-      method: 'post',
-      maxBodyLength: Infinity,
-      url: 'https://www.gequhai.com/api/music',
-      headers: {
-        'accept': 'application/json, text/javascript, */*; q=0.01',
-        'accept-language': 'zh-CN,zh;q=0.9,ko;q=0.8',
-        'cache-control': 'no-cache',
-        'content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
-        'origin': 'https://www.gequhai.com',
-        'pragma': 'no-cache',
-        'priority': 'u=1, i',
-        'sec-ch-ua': '"Not)A;Brand";v="8", "Chromium";v="138", "Google Chrome";v="138"',
-        'sec-ch-ua-mobile': '?0',
-        'sec-ch-ua-platform': '"Windows"',
-        'sec-fetch-dest': 'empty',
-        'sec-fetch-mode': 'cors',
-        'sec-fetch-site': 'same-origin',
-        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36',
-        'x-custom-header': 'SecretKey',
-        'x-requested-with': 'XMLHttpRequest',
-      },
-      data: data,
-    }
-
-    const resp = await axios.request(config)
     return {
-      url: resp.data.data.url,
+      url: musicItem.url,
       quality: 'standard',
     }
   },
