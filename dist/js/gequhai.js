@@ -47,15 +47,31 @@ module.exports = {
       await axios.get(`https://www.gequhai.com/play/${musicBase.id}`)
     ).data
 
-    const playIdReg = /play_id\s*=\s*['"]([^'"]+)['"]/
     const coverReg = /mp3_cover\s*=\s*['"]([^'"]+)['"]/
     const titleReg = /mp3_title\s*=\s*['"]([^'"]+)['"]/
     const authorReg = /mp3_author\s*=\s*['"]([^'"]+)['"]/
 
-    const playId = rawHtml.match(playIdReg)
     const cover = rawHtml.match(coverReg)
     const title = rawHtml.match(titleReg)
     const author = rawHtml.match(authorReg)
+
+    return {
+        artist: author[1],
+        title: title[1],
+        duration: 300,
+        /** 专辑封面图 */
+        artwork: cover[1],
+    }
+  },
+
+  async getMediaSource(musicItem, quality) {
+    const rawHtml = (
+      await axios.get(`https://www.gequhai.com/play/${musicItem.id}`)
+    ).data
+
+    const playIdReg = /play_id\s*=\s*['"]([^'"]+)['"]/
+
+    const playId = rawHtml.match(playIdReg)
 
     if (!playId) {
       throw new Error('无法找到播放ID')
@@ -91,19 +107,7 @@ module.exports = {
     const resp = await axios.request(config)
 
     return {
-        artist: author[1],
-        title: title[1],
-        duration: 300,
-        /** 专辑封面图 */
-        artwork: cover[1],
-        /** 默认音源 */
-        url: resp.data.data.url
-    }
-  },
-
-  async getMediaSource(musicItem, quality) {
-    return {
-      url: musicItem.url,
+      url: resp.data.data.url,
       quality: 'standard',
     }
   },
