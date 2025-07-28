@@ -55,12 +55,16 @@ module.exports = {
     const title = rawHtml.match(titleReg)
     const author = rawHtml.match(authorReg)
 
+    const $ = cheerio.load(rawHtml);
+    const lrc = $('#content-lrc2').text()
+
     return {
-        artist: author[1],
-        title: title[1],
-        duration: 300,
-        /** 专辑封面图 */
-        artwork: cover[1],
+      artist: author[1],
+      title: title[1],
+      duration: 300,
+      /** 专辑封面图 */
+      artwork: cover[1],
+      lrc: lrc,
     }
   },
 
