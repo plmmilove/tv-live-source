@@ -25,7 +25,6 @@ module.exports = {
         const title = tr1.text().trim()
         const artist = tr2.text().trim()
         const artwork = ''
-        const url = 'https://www.gequhai.com' + href
         const album = ''
 
         searchResults.push({
@@ -34,7 +33,6 @@ module.exports = {
           artist,
           artwork,
           album,
-          url,
         })
       })
       return {
