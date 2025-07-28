@@ -95,6 +95,7 @@ module.exports = {
     return {
         artist: author[1],
         title: title[1],
+        duration: 300,
         /** 专辑封面图 */
         artwork: cover[1],
         /** 默认音源 */
