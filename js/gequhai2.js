@@ -1,10 +1,49 @@
 const axios = require('axios')
 const cheerio = require('cheerio')
 
+class LRUCache {
+  constructor(capacity) {
+    this.cache = new Map();
+    this.capacity = capacity;
+  }
+
+  get(key) {
+    if (!this.cache.has(key)) return undefined;
+
+    let val = this.cache.get(key);
+
+    this.cache.delete(key);
+    this.cache.set(key, val);
+
+    return val;
+  }
+
+  put(key, value) {
+    this.cache.delete(key);
+
+    if (this.cache.size === this.capacity) {
+      this.cache.delete(this.cache.keys().next().value);
+      this.cache.set(key, value);
+    } else {
+      this.cache.set(key, value);
+    }
+  }
+
+  // Implement LRU/MRU retrieval methods
+  getLeastRecent() {
+    return Array.from(this.cache)[0];
+  }
+
+  getMostRecent() {
+    return Array.from(this.cache)[this.cache.size - 1];
+  }
+}
+
 module.exports = {
   platform: '歌曲海',
   version: '1.0.0',
   cacheControl: 'no-store',
+  cache: new LRUCache(100),
   async search(query, page, type) {
     if (type === 'music') {
       query = encodeURIComponent(query)
@@ -39,9 +78,7 @@ module.exports = {
   },
 
   async getMusicInfo(musicBase) {
-    const rawHtml = (
-      await axios.get(`https://www.gequhai.com/play/${musicBase.id}`)
-    ).data
+    const rawHtml = await this.getDetailHtml(musicBase.id)
 
     const coverReg = /mp3_cover\s*=\s*['"]([^'"]+)['"]/
     const titleReg = /mp3_title\s*=\s*['"]([^'"]+)['"]/
@@ -61,13 +98,11 @@ module.exports = {
   },
 
   async getMediaSource(musicItem, quality) {
-    const rawHtml = (
-      await axios.get(`https://www.gequhai.com/play/${musicItem.id}`)
-    ).data
+    const rawHtml = await this.getDetailHtml(musicItem.id)
 
     const playIdReg = /play_id\s*=\s*['"]([^'"]+)['"]/
     const playId = rawHtml.match(playIdReg)
-    
+
     if (!playId) {
       throw new Error('无法找到播放ID')
     }
@@ -108,13 +143,25 @@ module.exports = {
   },
 
   async getLyric(musicItem) {
-    const rawHtml = (
-      await axios.get(`https://www.gequhai.com/play/${musicItem.id}`)
-    ).data
+    const rawHtml = await this.getDetailHtml(musicItem.id)
 
     const $ = cheerio.load(rawHtml)
     return {
       rawLrc: $('#content-lrc2').text()
     }
   },
+
+  async getDetailHtml(id) {
+    const html = this.cache.get(id)
+    if(!html) {
+      const rawHtml = (
+        await axios.get(`https://www.gequhai.com/play/${id}`)
+      ).data
+      this.cache.put(id, rawHtml)
+      return rawHtml
+    } else {
+      return html
+    }
+  }
 }
+
