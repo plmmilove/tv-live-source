@@ -59,9 +59,7 @@ module.exports = {
     musicItem.artwork = cover[1]
 
     const $ = cheerio.load(rawHtml)
-    musicItem.lyric = {
-      rawLrc: $('#content-lrc2').text(),
-    }
+    musicItem.rawLrc = $('#content-lrc2').text()
 
     if (!playId) {
       throw new Error('无法找到播放ID')
@@ -101,4 +99,10 @@ module.exports = {
       quality: 'standard',
     }
   },
+
+  async getLyric(musicItem) {
+    return {
+      rawLrc: musicItem.rawLrc
+    }
+  }
 }
