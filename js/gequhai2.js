@@ -1,49 +1,11 @@
 const axios = require('axios')
 const cheerio = require('cheerio')
 
-class LRUCache {
-  constructor(capacity) {
-    this.cache = new Map();
-    this.capacity = capacity;
-  }
-
-  get(key) {
-    if (!this.cache.has(key)) return undefined;
-
-    let val = this.cache.get(key);
-
-    this.cache.delete(key);
-    this.cache.set(key, val);
-
-    return val;
-  }
-
-  put(key, value) {
-    this.cache.delete(key);
-
-    if (this.cache.size === this.capacity) {
-      this.cache.delete(this.cache.keys().next().value);
-      this.cache.set(key, value);
-    } else {
-      this.cache.set(key, value);
-    }
-  }
-
-  // Implement LRU/MRU retrieval methods
-  getLeastRecent() {
-    return Array.from(this.cache)[0];
-  }
-
-  getMostRecent() {
-    return Array.from(this.cache)[this.cache.size - 1];
-  }
-}
-
 module.exports = {
   platform: '歌曲海',
   version: '1.0.0',
   cacheControl: 'no-store',
-  cache: new LRUCache(100),
+  cache: new Map(),
   async search(query, page, type) {
     if (type === 'music') {
       query = encodeURIComponent(query)
@@ -147,21 +109,24 @@ module.exports = {
 
     const $ = cheerio.load(rawHtml)
     return {
-      rawLrc: $('#content-lrc2').text()
+      rawLrc: $('#content-lrc2').text(),
     }
   },
 
   async getDetailHtml(id) {
     const html = this.cache.get(id)
-    if(!html) {
+    if (!html) {
       const rawHtml = (
         await axios.get(`https://www.gequhai.com/play/${id}`)
       ).data
-      this.cache.put(id, rawHtml)
+
+      if (this.cache.size === 100) {
+        this.cache.delete(this.cache.keys().next().value)
+      }
+      this.cache.set(id, rawHtml)
       return rawHtml
     } else {
       return html
     }
-  }
+  },
 }
-
