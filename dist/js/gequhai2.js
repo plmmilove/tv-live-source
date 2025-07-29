@@ -2,8 +2,8 @@ const axios = require('axios')
 const cheerio = require('cheerio')
 
 module.exports = {
-  platform: '歌曲海2',
-  version: '1.1.0',
+  platform: '歌曲海',
+  version: '1.0.0',
   cacheControl: 'no-store',
   async search(query, page, type) {
     if (type === 'music') {
@@ -24,15 +24,11 @@ module.exports = {
         const id = href.slice(6)
         const title = tr1.text().trim()
         const artist = tr2.text().trim()
-        const artwork = ''
-        const album = ''
 
         searchResults.push({
           id,
           title,
           artist,
-          artwork,
-          album,
         })
       })
       return {
@@ -42,9 +38,9 @@ module.exports = {
     }
   },
 
-  async getMusicInfo(musicBase) {
+  async getMediaSource(musicItem, quality) {
     const rawHtml = (
-      await axios.get(`https://www.gequhai.com/play/${musicBase.id}`)
+      await axios.get(`https://www.gequhai.com/play/${musicItem.id}`)
     ).data
 
     const playIdReg = /play_id\s*=\s*['"]([^'"]+)['"]/
@@ -57,18 +53,21 @@ module.exports = {
     const title = rawHtml.match(titleReg)
     const author = rawHtml.match(authorReg)
 
-    return {
-        artist: author[1],
-        title: title[1],
-        duration: 300,
-        /** 专辑封面图 */
-        artwork: cover[1],
-        playId: playId[1],
-    }
-  },
+    musicItem.artist = author[1]
+    musicItem.title = title[1]
+    musicItem.duration = 300
+    musicItem.artwork = cover[1]
 
-  async getMediaSource(musicItem, quality) {
-    let data = `id=${encodeURIComponent(musicItem.playId)}`
+    const $ = cheerio.load(rawHtml)
+    musicItem.lyric = {
+      rawLrc: $('#content-lrc2').text(),
+    }
+
+    if (!playId) {
+      throw new Error('无法找到播放ID')
+    }
+
+    let data = `id=${encodeURIComponent(playId[1])}`
 
     let config = {
       method: 'post',
