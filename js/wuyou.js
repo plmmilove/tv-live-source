@@ -55,33 +55,7 @@ module.exports = {
     },
 
     async getMediaSource(musicItem, quality) {
-        const resp = await fetch("https://www.qeecc.com/js/play.php", {
-            "headers": {
-                "accept": "application/json, text/javascript, */*; q=0.01",
-                "accept-language": "zh-CN,zh;q=0.9",
-                "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
-                "priority": "u=1, i",
-                "sec-ch-ua": "\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"",
-                "sec-ch-ua-mobile": "?0",
-                "sec-ch-ua-platform": "\"Windows\"",
-                "sec-fetch-dest": "empty",
-                "sec-fetch-mode": "cors",
-                "sec-fetch-site": "same-origin",
-                "x-requested-with": "XMLHttpRequest",
-                "Referer": `https://www.qeecc.com/song/${musicItem.id}.html`
-            },
-            "body": "id=" + musicItem.id + "&type=music",
-            "method": "POST"
-        });
-
-        let data = await resp.text()
-
-        data = JSON.parse(data)
-
-        if (this.cache.size === 100) {
-            this.cache.delete(this.cache.keys().next().value)
-        }
-        this.cache.set(musicItem.id, data.lkid)
+        const data = await this.getPostData(musicItem.id)
 
         return {
             url: data.url,
@@ -90,7 +64,8 @@ module.exports = {
     },
 
     async getLyric(musicItem) {
-        const cid = this.cache.get(musicItem.id)
+        const pd = await this.getPostData(musicItem.id)
+        const cid = pd.lkid
         if(!cid) {
             return null
         }
@@ -121,5 +96,38 @@ module.exports = {
         return {
             rawLrc: data.lrc,
         }
+    },
+
+    async getPostData(id) {
+        let data = this.cache.get(id)
+        if (!data) {
+            const resp = await fetch("https://www.qeecc.com/js/play.php", {
+                "headers": {
+                    "accept": "application/json, text/javascript, */*; q=0.01",
+                    "accept-language": "zh-CN,zh;q=0.9",
+                    "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+                    "priority": "u=1, i",
+                    "sec-ch-ua": "\"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\", \"Google Chrome\";v=\"138\"",
+                    "sec-ch-ua-mobile": "?0",
+                    "sec-ch-ua-platform": "\"Windows\"",
+                    "sec-fetch-dest": "empty",
+                    "sec-fetch-mode": "cors",
+                    "sec-fetch-site": "same-origin",
+                    "x-requested-with": "XMLHttpRequest",
+                    "Referer": `https://www.qeecc.com/song/${id}.html`
+                },
+                "body": "id=" + id + "&type=music",
+                "method": "POST"
+            });
+
+            data = await resp.text()
+            data = JSON.parse(data)
+
+            if (this.cache.size === 100) {
+                this.cache.delete(this.cache.keys().next().value)
+            }
+            this.cache.set(id, data)
+        }
+        return data
     },
 };
