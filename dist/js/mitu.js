@@ -70,10 +70,26 @@ module.exports = {
         {
           id: 'hot',
           title: '热门',
+
+          // find bug
+          coverImg: '',
+          artwork: '',
+          artist: '',
+          description: '',
+          worksNum: 20,
+          platform: this.platform,
         },
         {
           id: 'random',
           title: '随机',
+
+          // find bug
+          coverImg: '',
+          artwork: '',
+          artist: '',
+          description: '',
+          worksNum: 20,
+          platform: this.platform,
         },
       ],
     }
@@ -118,6 +134,10 @@ module.exports = {
         artist,
         artwork,
         duration: 300,
+
+        // find bug
+        platform: this.platform,
+        album: '',
       })
     })
 
@@ -130,9 +150,12 @@ module.exports = {
           coverImg: musicList.length > 0 ? musicList[0].artwork : null,
           artwork: musicList.length > 0 ? musicList[0].artwork : null,
           worksNum: musicList.length,
-          platform: this.platform,
-          album: '',
           musicList,
+          
+          //find bug
+          artist: '',
+          description: '',
+          platform: this.platform,
         },
       ],
     }
