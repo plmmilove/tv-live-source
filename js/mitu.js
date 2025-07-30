@@ -82,14 +82,6 @@ module.exports = {
         {
           id: 'random',
           title: '随机',
-
-          // find bug
-          coverImg: '',
-          artwork: '',
-          artist: '',
-          description: '',
-          worksNum: 20,
-          platform: this.platform,
         },
       ],
     }
@@ -134,10 +126,7 @@ module.exports = {
         artist,
         artwork,
         duration: 300,
-
-        // find bug
-        //platform: this.platform,
-        album: '',
+        platform: this.platform,
       })
     })
 
@@ -151,11 +140,6 @@ module.exports = {
           artwork: musicList.length > 0 ? musicList[0].artwork : null,
           worksNum: musicList.length,
           musicList,
-          
-          //find bug
-          artist: '',
-          description: '',
-          platform: this.platform,
         },
       ],
     }
