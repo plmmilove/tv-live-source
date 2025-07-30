@@ -136,7 +136,7 @@ module.exports = {
         duration: 300,
 
         // find bug
-        platform: this.platform,
+        //platform: this.platform,
         album: '',
       })
     })
