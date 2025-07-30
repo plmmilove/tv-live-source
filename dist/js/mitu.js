@@ -127,6 +127,8 @@ module.exports = {
         {
           id: tag.id,
           title: tag.id === 'random' ? '随机推荐' : tag.id === 'hot' ? '热门推荐' : tag.id,
+          coverImg: musicList.length > 0 ? musicList[0].artwork : null,
+          artwork: musicList.length > 0 ? musicList[0].artwork : null,
           worksNum: musicList.length,
           musicList,
         },
