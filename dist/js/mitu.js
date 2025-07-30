@@ -130,6 +130,8 @@ module.exports = {
           coverImg: musicList.length > 0 ? musicList[0].artwork : null,
           artwork: musicList.length > 0 ? musicList[0].artwork : null,
           worksNum: musicList.length,
+          platform: this.platform,
+          album: '',
           musicList,
         },
       ],
