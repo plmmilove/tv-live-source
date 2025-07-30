@@ -1,1 +1,166 @@
-(()=>{var e={148:e=>{"use strict";e.exports=require("axios")},339:(e,t,r)=>{r(148),r(735),e.exports={platform:"米兔",version:"1.0.0",cacheControl:"no-cache",cache:new Map,async search(e,t,r){if("music"===r){e=encodeURIComponent(e);const t=await fetch(`https://www.qqmp3.vip/api/songs.php?type=search&keyword=${e}`,{credentials:"include",headers:{"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:141.0) Gecko/20100101 Firefox/141.0",Accept:"*/*","Accept-Language":"zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin",Priority:"u=0"},referrer:"https://www.qqmp3.vip/",method:"GET",mode:"cors"});let r=await t.json();const i=[];return r.data.forEach(e=>{const t=e.rid,r=e.name,a=e.artist,s=e.pic;i.push({id:t,title:r,artist:a,artwork:s,duration:300})}),{isEnd:!1,data:i}}},async getMediaSource(e,t){return{url:(await this.getPostData(e.id)).data.url,quality:"standard"}},async getLyric(e){return{rawLrc:(await this.getPostData(e.id)).data.lrc}},getRecommendSheetTags:async()=>({pinned:[{id:"hot",title:"热门"},{id:"random",title:"随机"}]}),async getRecommendSheetsByTag(e,t){let r;r="random"===e.id?"https://www.qqmp3.vip/api/songs.php?type=rand":"https://www.qqmp3.vip/api/songs.php";const i=await fetch(r,{credentials:"include",headers:{"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:141.0) Gecko/20100101 Firefox/141.0",Accept:"*/*","Accept-Language":"zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin",Priority:"u=0"},referrer:"https://www.qqmp3.vip/",method:"GET",mode:"cors"});let a=await i.json();const s=[];return a.data.forEach(e=>{const t=e.rid,r=e.name,i=e.artist,a=e.pic;s.push({id:t,title:r,artist:i,artwork:a,duration:300})}),{isEnd:!0,data:[{id:e.id,worksNum:s.length,musicList:s}]}},async getPostData(e){let t=this.cache.get(e);if(!t){const r=await fetch(`https://www.qqmp3.vip/api/kw.php?rid=${e}&type=json&level=exhigh&lrc=true`,{credentials:"include",headers:{"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:141.0) Gecko/20100101 Firefox/141.0",Accept:"*/*","Accept-Language":"zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-origin",Priority:"u=0"},referrer:"https://www.qqmp3.vip/",method:"GET",mode:"cors"});t=await r.json(),100===this.cache.size&&this.cache.delete(this.cache.keys().next().value),this.cache.set(e,t)}return t}}},735:e=>{"use strict";e.exports=require("cheerio")}},t={},r=function r(i){var a=t[i];if(void 0!==a)return a.exports;var s=t[i]={exports:{}};return e[i](s,s.exports,r),s.exports}(339);module.exports=r})();
+module.exports = {
+  platform: '米兔',
+  version: '1.0.0',
+  cacheControl: 'no-cache',
+  cache: new Map(),
+  async search(query, page, type) {
+    if (type === 'music') {
+      query = encodeURIComponent(query)
+      const resp = await fetch(
+        `https://www.qqmp3.vip/api/songs.php?type=search&keyword=${query}`, {
+          'credentials': 'include',
+          'headers': {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:141.0) Gecko/20100101 Firefox/141.0',
+            'Accept': '*/*',
+            'Accept-Language': 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+            'Sec-Fetch-Dest': 'empty',
+            'Sec-Fetch-Mode': 'cors',
+            'Sec-Fetch-Site': 'same-origin',
+            'Priority': 'u=0',
+          },
+          'referrer': 'https://www.qqmp3.vip/',
+          'method': 'GET',
+          'mode': 'cors',
+        })
+
+      let data = await resp.json()
+
+      const searchResults = []
+      data.data.forEach((e) => {
+        const id = e.rid
+        const title = e.name
+        const artist = e.artist
+        const artwork = e.pic
+
+        searchResults.push({
+          id,
+          title,
+          artist,
+          artwork,
+          duration: 300,
+        })
+      })
+      return {
+        isEnd: false,
+        data: searchResults,
+      }
+    }
+  },
+
+  async getMediaSource(musicItem, quality) {
+    const pd = await this.getPostData(musicItem.id)
+
+    return {
+      url: pd.data.url,
+      quality: 'standard',
+    }
+  },
+
+  async getLyric(musicItem) {
+    const pd = await this.getPostData(musicItem.id)
+
+    return {
+      rawLrc: pd.data.lrc,
+    }
+  },
+
+  async getRecommendSheetTags() {
+    return {
+      pinned: [
+        {
+          id: 'hot',
+          title: '热门',
+        },
+        {
+          id: 'random',
+          title: '随机',
+        },
+      ],
+    }
+  },
+
+  async getRecommendSheetsByTag(tag, page) {
+    let url
+    if (tag.id === 'random') {
+      url = 'https://www.qqmp3.vip/api/songs.php?type=rand'
+    } else {
+      url = 'https://www.qqmp3.vip/api/songs.php'
+    }
+
+    const resp = await fetch(url, {
+      'credentials': 'include',
+      'headers': {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:141.0) Gecko/20100101 Firefox/141.0',
+        'Accept': '*/*',
+        'Accept-Language': 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+        'Sec-Fetch-Dest': 'empty',
+        'Sec-Fetch-Mode': 'cors',
+        'Sec-Fetch-Site': 'same-origin',
+        'Priority': 'u=0',
+      },
+      'referrer': 'https://www.qqmp3.vip/',
+      'method': 'GET',
+      'mode': 'cors',
+    })
+
+    let data = await resp.json()
+
+    const musicList = []
+    data.data.forEach((e) => {
+      const id = e.rid
+      const title = e.name
+      const artist = e.artist
+      const artwork = e.pic
+
+      musicList.push({
+        id,
+        title,
+        artist,
+        artwork,
+        duration: 300,
+      })
+    })
+
+    return {
+      isEnd: true,
+      data: [
+        {
+          id: tag.id,
+          worksNum: musicList.length,
+          musicList,
+        },
+      ],
+    }
+  },
+
+  async getPostData(id) {
+    let data = this.cache.get(id)
+    if (!data) {
+      const resp = await fetch(
+        `https://www.qqmp3.vip/api/kw.php?rid=${id}&type=json&level=exhigh&lrc=true`,
+        {
+          'credentials': 'include',
+          'headers': {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:141.0) Gecko/20100101 Firefox/141.0',
+            'Accept': '*/*',
+            'Accept-Language': 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+            'Sec-Fetch-Dest': 'empty',
+            'Sec-Fetch-Mode': 'cors',
+            'Sec-Fetch-Site': 'same-origin',
+            'Priority': 'u=0',
+          },
+          'referrer': 'https://www.qqmp3.vip/',
+          'method': 'GET',
+          'mode': 'cors',
+        })
+
+      data = await resp.json()
+
+      if (this.cache.size === 100) {
+        this.cache.delete(this.cache.keys().next().value)
+      }
+      this.cache.set(id, data)
+    }
+    return data
+  },
+}
