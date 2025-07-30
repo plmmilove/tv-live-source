@@ -126,6 +126,7 @@ module.exports = {
       data: [
         {
           id: tag.id,
+          title: tag.id === 'random' ? '随机推荐' : tag.id === 'hot' ? '热门推荐' : tag.id,
           worksNum: musicList.length,
           musicList,
         },
