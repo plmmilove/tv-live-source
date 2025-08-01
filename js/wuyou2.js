@@ -80,6 +80,9 @@ module.exports = {
 
   async getTopLists() {
     return [
+      {data: [{id: 'hot'}], title: '网络红歌榜'},
+      {data: [{id: 'new'}], title: '网络最新榜'},
+      {data: [{id: 'top'}], title: 'TOP榜'},
       {data: [{id: 'djwuqu'}], title: 'DJ舞曲大全'},
       {data: [{id: 'share'}], title: '音乐热评榜'},
       {data: [{id: 'ndtop'}], title: '音乐先锋榜'},
@@ -111,13 +114,11 @@ module.exports = {
       {data: [{id: 'vlogtop'}], title: 'Vlog必备榜'},
       {data: [{id: 'ktvtop'}], title: 'KTV点唱榜'},
       {data: [{id: 'tqltop'}], title: '通勤路上榜'},
-      {data: [{id: 'hot'}], title: '网络红歌榜'},
-      {data: [{id: 'new'}], title: '网络最新榜'}
     ]
   },
 
   async getTopListDetail(topListItem, page) {
-    let url = `https://www.qeecc.com/${topListItem.id}/${page}.html`
+    let url = `https://www.qeecc.com/list/${topListItem.id}/${page}.html`
     const results = await this.getMusicList(url)
     return {
       isEnd: false,
