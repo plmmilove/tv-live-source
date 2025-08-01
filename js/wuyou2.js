@@ -193,7 +193,7 @@ module.exports = {
     }
 
     return {
-      isEnd: false,
+      isEnd: $('div.page > a:contains("下一页")').length === 0,
       data: list,
     }
   },
