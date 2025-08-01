@@ -117,7 +117,7 @@ module.exports = {
   },
 
   async getTopListDetail(topListItem, page) {
-    let url = `https://www.qeecc.com/top/${topListItem.id}/${page}.html`
+    let url = `https://www.qeecc.com/${topListItem.id}/${page}.html`
     const results = await this.getMusicList(url)
     return {
       isEnd: false,
