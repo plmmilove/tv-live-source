@@ -78,6 +78,52 @@ module.exports = {
     }
   },
 
+  async getTopLists() {
+    return [
+      {data: {id: 'djwuqu'}, title: 'DJ舞曲大全'},
+      {data: {id: 'share'}, title: '音乐热评榜'},
+      {data: {id: 'ndtop'}, title: '音乐先锋榜'},
+      {data: {id: 'hktop'}, title: '爱听电音榜'},
+      {data: {id: 'cztop'}, title: '车载歌曲榜'},
+      {data: {id: 'ygtop'}, title: '英国排行榜'},
+      {data: {id: 'krtop'}, title: '韩国排行榜'},
+      {data: {id: 'jptop'}, title: '日本排行榜'},
+      {data: {id: 'kuaishou'}, title: '快手热歌榜'},
+      {data: {id: 'douyin'}, title: '抖音热歌榜'},
+      {data: {id: 'kwyc'}, title: '酷我原创榜'},
+      {data: {id: 'newacg'}, title: 'ACG新歌榜'},
+      {data: {id: 'kuwo'}, title: '酷我飙升榜'},
+      {data: {id: 'dytop'}, title: '电音热歌榜'},
+      {data: {id: 'newzy'}, title: '综艺新歌榜'},
+      {data: {id: 'sctop'}, title: '说唱先锋榜'},
+      {data: {id: 'ystop'}, title: '影视金曲榜'},
+      {data: {id: 'yytop'}, title: '粤语金曲榜'},
+      {data: {id: 'ustop'}, title: '欧美金曲榜'},
+      {data: {id: 'blhot'}, title: '80后热歌榜'},
+      {data: {id: 'wlhot'}, title: '网红新歌榜'},
+      {data: {id: 'gfhot'}, title: '古风音乐榜'},
+      {data: {id: 'xrtop'}, title: '夏日畅爽榜'},
+      {data: {id: 'vip'}, title: '会员喜爱榜'},
+      {data: {id: 'jstop'}, title: '跑步健身榜'},
+      {data: {id: 'bbtop'}, title: '宝宝哄睡榜'},
+      {data: {id: 'sqtop'}, title: '睡前放松榜'},
+      {data: {id: 'aytop'}, title: '熬夜修仙榜'},
+      {data: {id: 'vlogtop'}, title: 'Vlog必备榜'},
+      {data: {id: 'ktvtop'}, title: 'KTV点唱榜'},
+      {data: {id: 'tqltop'}, title: '通勤路上榜'},
+      {data: {id: 'hot'}, title: '网络红歌榜'},
+      {data: {id: 'new'}, title: '网络最新榜'}]
+  },
+
+  async getTopListDetail(topListItem, page) {
+    let url = `https://www.qeecc.com/top/${topListItem.id}/${page}.html`
+    const results = await this.getMusicList(url)
+    return {
+      isEnd: false,
+      musicList: results,
+    }
+  },
+
   async getRecommendSheetTags() {
     const rawHtml = (
       await axios.get(`https://www.qeecc.com/playtype/index.html`)
@@ -129,7 +175,7 @@ module.exports = {
     const list = []
     const resultElements = $('div.video_list > ul.play > li')
 
-    for (let i = 0; i < resultElements.length && i < 5; i++) {
+    for (let i = 0; i < resultElements.length; i++) {
       const e = $(resultElements[i])
 
       const href = e.find('div.pic > a').attr('href')
@@ -138,20 +184,23 @@ module.exports = {
       const title = e.find('div.name > a').attr('title')
       const coverImg = e.find('div.pic > a > img').attr('src')
 
-      const musicList = await this.getMusicList(`https://www.qeecc.com${href}`)
       list.push({
         id,
         title,
         coverImg,
         artwork: coverImg,
-        musicList,
       })
     }
 
     return {
-      isEnd: true,
+      isEnd: false,
       data: list,
     }
+  },
+
+  async getMusicSheetInfo(sheetBase) {
+    return await this.getMusicList(
+      `https://www.qeecc.com/song/${sheetBase.id}.html`)
   },
 
   async getMusicList(url) {
