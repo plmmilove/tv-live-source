@@ -224,7 +224,7 @@ module.exports = {
     })
 
     return {
-      isEnd: $('div.page > a:contains("下一页")').length === 0,
+      isEnd: true,
       musicList: list,
     }
   },
