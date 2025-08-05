@@ -155,7 +155,7 @@ module.exports = {
   },
 
   async getMusicSheetInfo(sheetBase, page) {
-    return await this.getMusicList(
+    return await this.getMusicSheetMusicList(
       `https://www.33ve.com/playlist/${sheetBase.id}/${page}.html`)
   },
 
@@ -194,6 +194,41 @@ module.exports = {
     }
   },
 
+  async getMusicSheetMusicList(url) {
+    const rawHtml = (
+      await axios.get(url)
+    ).data
+
+    const $ = cheerio.load(rawHtml)
+    const list = []
+    const resultElements = $('.play_list > ul > li')
+    resultElements.each((index, element) => {
+      const e = $(element).find('div.pic > a')
+      const href = e.attr('href')
+
+      const id = href.slice(5, -5)
+      const title = $(e).find('img').attr('alt')
+      const artwork = $(e).find('img').attr('src')
+
+      const name = $(element).find('div.name > a').text()
+      const artist = name.substring(0, name.indexOf('-')).trim()
+
+      list.push({
+        id,
+        title,
+        artist,
+        artwork,
+        duration: 300,
+        platform: this.platform,
+      })
+    })
+
+    return {
+      isEnd: $('div.page > a:contains("下一页")').length === 0,
+      musicList: list,
+    }
+  },
+
   async getMusicList(url) {
     const rawHtml = (
       await axios.get(url)
@@ -208,10 +243,9 @@ module.exports = {
 
       const id = href.slice(5, -5)
       const title = $(e).find('img').attr('alt')
-      const name = $(element).find('div.name > a:eq(0)').text()
-
-      const artist = name.substring(0, name.indexOf('-')).trim()
       const artwork = $(e).find('img').attr('src')
+
+      const artist = $(element).find('div.list_r > p > a:eq(0)').text()
 
       list.push({
         id,
