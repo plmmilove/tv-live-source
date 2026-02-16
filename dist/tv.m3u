@@ -26,7 +26,7 @@ http://118.122.103.235:4022/udp/239.93.0.156:2193,http://118.122.103.235:4022/ud
 #EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="" group-title="未分类",CHANNEL-V
 http://118.122.103.235:4022/udp/239.93.0.157:2194,http://118.122.103.235:4022/udp/239.93.1.7:2194
 #EXTINF:-1 tvg-id="1" tvg-name="CCTV1" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV1.png" group-title="央视",CCTV-1高清
-http://118.122.103.235:4022/udp/239.93.0.184:5140
+http://223.76.131.67:5003/cctv1.m3u8?token=7375646f5cbbf695416c7613009a544e44ae00ba&z=1f4e
 #EXTINF:-1 tvg-id="2" tvg-name="CCTV2" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV2.png" group-title="央视",CCTV-2高清
 http://118.122.103.235:4022/udp/239.93.1.23:6000
 #EXTINF:-1 tvg-id="3" tvg-name="CCTV3" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV3.png" group-title="央视",CCTV-3高清
